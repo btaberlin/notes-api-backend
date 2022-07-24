@@ -133,10 +133,12 @@ app.use((request, response) => {
 })
 /// //////////////////////////////////////////////////////////
 
-const PORT = 3001
+// const PORT = 3001
 // el servidor en express se levanta de forma asyncrona: cuendo se termine de levantar el servidos en el puerto 3001, entonces se manda el console.log
 // de esta forma se puede gfgfgf la pequena latencia de tiempo para levantar el servidos
 // de la otra forma, se muestra el console.log, aunque el servidos no esta completamente levantado todavia
+
+const PORT = process.env.PORT || 3001
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}/`)
 })
